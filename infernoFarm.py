@@ -11,8 +11,6 @@ import time
     # tower upgrade hotkeys are default "," "." "/"
     # Screen Size =  1440 x 900
 
-
-
 pyautogui.PAUSE = 0.5
 #define tower placement parameters
 def sniper():
@@ -36,50 +34,47 @@ def alchemist():
     pyautogui.press(",",presses=4)
     pyautogui.press(".",presses=2)
 
+#define functions for game controls
+def startMap():
+    # play button
+    pyautogui.click(616,771)
+    #expert map icon
+    pyautogui.click(1031,812)
+    #inferno map
+    pyautogui.click(716,471)
+    # easy diff
+    pyautogui.click(432,337)
+    # deflation mode
+    pyautogui.click(975,361)
+    time.sleep(7)
+    # clear deflation popup
+    pyautogui.click(704,621)
+
+def runMap():
+    pyautogui.click(1375,806,clicks=2,interval=1.0)
+
+def endOfMatch():
+    pyautogui.click(710,775)
+    pyautogui.click(517,708)
 
 #buffer time to swap to bloons window
 time.sleep(5)
 
 while True:
-    ### setup the match for inferno deflation
-    # play button = 616,771
-    pyautogui.click(616,771)
-
-    #expert map icon = 1031,812
-    pyautogui.click(1031,812)
-
-    #inferno map = 716,471
-    pyautogui.click(716,471)
-
-
-    # easy diff = 432,337
-    pyautogui.click(432,337)
-
-    # deflation mode = 975, 361
-    pyautogui.click(975,361)
-    time.sleep(7)
-
-    # okay the popup for delflation
-    pyautogui.click(704,621)
+    time.sleep(3)
+    startMap()
 
     # tower placements
     village()
     sniper()
     alchemist()
 
-    # run map and set to fast speed
-    pyautogui.click(1375,806,clicks=2,interval=1.0)
+    runMap()
 
     # add logic for level up popup clear 
     # two clicks in middle of screen
 
     # runtime is approx 295 seconds, time added in for a buffer
-    time.sleep(310)
+    time.sleep(295)
 
-    # clicking exit game
-    pyautogui.click(710,775)
-    time.sleep(3)
-
-    # clicking home button
-    pyautogui.click(517,708)
-    time.sleep(3)
+    endOfMatch()
