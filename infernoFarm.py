@@ -62,6 +62,7 @@ time.sleep(5)
 
 while True:
     time.sleep(3)
+    
     startMap()
 
     # tower placements
