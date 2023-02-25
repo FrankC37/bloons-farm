@@ -5,7 +5,7 @@
 - Some event popups do not have their "logic" built in so it is not a 100% hands off run
 - Runs Deflation on the Inferno Map
 - Python 3 installed
--  PyAutoGui installed "pip install pyautogui"
+- PyAutoGui installed "pip install pyautogui"
 
 
 ## Known Issues
