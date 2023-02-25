@@ -9,12 +9,36 @@ import time
     # set village keybind to "V"
     # set sniper keybind to "S"
     # tower upgrade hotkeys are default "," "." "/"
+    # Screen Size =  1440 x 900
 
-# Screen Size =  1440 x 900
-#buffer time to swap to bloons
+
+
+pyautogui.PAUSE = 0.5
+#define tower placement parameters
+def sniper():
+    pyautogui.moveTo(1154,437)
+    pyautogui.press('S',presses=4)
+    pyautogui.click(clicks=2,interval=0.5)
+    pyautogui.press(".",presses=2)
+    pyautogui.press("/",presses=4)
+
+def village():
+    pyautogui.moveTo(1178,521)
+    pyautogui.press('V',presses=4)
+    pyautogui.click(clicks=2,interval=0.5)
+    pyautogui.press("/",presses=2)
+    pyautogui.press(",",presses=2)
+
+def alchemist():
+    pyautogui.moveTo(1207,436)
+    pyautogui.press('A',presses=4)
+    pyautogui.click(clicks=2,interval=0.5)
+    pyautogui.press(",",presses=4)
+    pyautogui.press(".",presses=2)
+
+
+#buffer time to swap to bloons window
 time.sleep(5)
-
-pyautogui.PAUSE = 1.0
 
 while True:
     ### setup the match for inferno deflation
@@ -38,32 +62,10 @@ while True:
     # okay the popup for delflation
     pyautogui.click(704,621)
 
-    ### tower placements
-    ## Hot Keys Village = V, Sniper = S, Alch = A
-
-    # village placement 2-0-2
-    pyautogui.moveTo(1178,521)
-    pyautogui.press('V',presses=4)
-    pyautogui.click()
-    pyautogui.click()
-    pyautogui.press("/",presses=2)
-    pyautogui.press(",",presses=2)
-
-    # sniper placement 2-0-4
-    pyautogui.moveTo(1154,437)
-    pyautogui.press('S',presses=4)
-    pyautogui.click()
-    pyautogui.click()
-    pyautogui.press(".",presses=2)
-    pyautogui.press("/",presses=4)
-
-    # alchemist placement 4-2-0
-    pyautogui.moveTo(1207,436)
-    pyautogui.press('A',presses=4)
-    pyautogui.click()
-    pyautogui.click()
-    pyautogui.press(",",presses=4)
-    pyautogui.press(".",presses=2)
+    # tower placements
+    village()
+    sniper()
+    alchemist()
 
     # run map and set to fast speed
     pyautogui.click(1375,806,clicks=2,interval=1.0)
@@ -73,6 +75,7 @@ while True:
 
     # runtime is approx 295 seconds, time added in for a buffer
     time.sleep(310)
+
     # clicking exit game
     pyautogui.click(710,775)
     time.sleep(3)
