@@ -55,7 +55,7 @@ else:
         pyautogui.click(725,750)
         pyautogui.click(517,708)
 
-    sleepDuringMatch = Timer(297, endOfMatch) 
+    #sleepDuringMatch = Timer(297, endOfMatch) 
 
     #buffer time to swap to bloons window
     time.sleep(3)
