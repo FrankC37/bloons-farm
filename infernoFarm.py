@@ -35,7 +35,7 @@ else:
     #define functions for game controls
     def startMap():
         # play button
-        pyautogui.click(616,771)
+        pyautogui.click(616,785)
         #expert map icon
         pyautogui.click(1031,812)
         #inferno map
@@ -52,7 +52,7 @@ else:
         pyautogui.click(1375,806,clicks=2,interval=1.0)
 
     def endOfMatch():
-        pyautogui.click(710,775)
+        pyautogui.click(725,750)
         pyautogui.click(517,708)
 
     sleepDuringMatch = Timer(297, endOfMatch) 
