@@ -58,11 +58,9 @@ else:
     sleepDuringMatch = Timer(297, endOfMatch) 
 
     #buffer time to swap to bloons window
-    time.sleep(5)
+    time.sleep(3)
 
     while True:
-        time.sleep(3)
-
         startMap()
 
         # tower placements
@@ -72,5 +70,8 @@ else:
 
         runMap()
 
-        sleepDuringMatch.start()
-        pyautogui.click(700,450,interval=1,clicks=290)
+        #sleepDuringMatch.start()
+        time.sleep(297)
+        endOfMatch()
+        #pyautogui.click(700,450,interval=1,clicks=290)
+        time.sleep(3)
