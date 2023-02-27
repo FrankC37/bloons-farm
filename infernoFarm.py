@@ -60,6 +60,7 @@ else:
     time.sleep(3)
 
     while True:
+        count = 0
         startMap()
 
         # tower placements
@@ -74,3 +75,5 @@ else:
         endOfMatch()
         #pyautogui.click(700,450,interval=1,clicks=290)
         time.sleep(3)
+        count = count +1
+        print(f"Times run: {count}")
