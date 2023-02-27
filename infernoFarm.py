@@ -1,7 +1,7 @@
 import pyautogui
 import time
 from threading import Timer
-
+from datetime import datetime
 screenSizeX, screenSizeY = pyautogui.size()
 
 if screenSizeX != 1440 and screenSizeY != 900:
@@ -61,6 +61,7 @@ else:
     time.sleep(3)
 
     while True:
+        startTime = datetime.now()
         startMap()
 
         # tower placements
@@ -75,3 +76,4 @@ else:
         endOfMatch()
         #pyautogui.click(700,450,interval=1,clicks=290)
         time.sleep(3)
+        endTime = datetime.now()

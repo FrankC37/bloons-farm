@@ -1,13 +1,13 @@
 # Monkey Money / Knowledge Farm
 
-## Assumptions
+## Assumptions and Info
 - This starts fresh fresh from the main screen
 - Some event popups do not have their "logic" built in, so it is not a 100% hands off run
 - Runs Deflation on the Inferno Map
 - Python 3 installed
 - PyAutoGui installed
 - 1440x900 resolution monitor
-
+- ~ 11 runs per hour netting approx. 675 monkey cash an hour
 
 ## Known Issues
 - Sometimes towers fail to place and cause the map to fail
