@@ -72,6 +72,7 @@ else:
         time.sleep(3)
         cash = cash + 66
         print(f"Est Cash Gained: {cash}")
+        # start collection event logic
         collectButton = pyautogui.locateCenterOnScreen('media/collect.png')
         if collectButton != None:
             collectButton = pyautogui.locateCenterOnScreen('collect.png')
