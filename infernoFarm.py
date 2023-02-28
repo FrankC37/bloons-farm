@@ -1,6 +1,5 @@
 import pyautogui
 import time
-from threading import Timer
 screenSizeX, screenSizeY = pyautogui.size()
 
 if screenSizeX != 1440 and screenSizeY != 900:
@@ -54,8 +53,6 @@ else:
         pyautogui.click(725,750)
         pyautogui.click(517,708)
 
-    #sleepDuringMatch = Timer(297, endOfMatch) 
-
     #buffer time to swap to bloons window
     time.sleep(3)
     cash = 0
@@ -72,7 +69,6 @@ else:
         #sleepDuringMatch.start()
         time.sleep(297)
         endOfMatch()
-        #pyautogui.click(700,450,interval=1,clicks=290)
         time.sleep(3)
         cash = cash + 66
         print(f"Est Cash Gained: {cash}")
