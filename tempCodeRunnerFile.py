@@ -1,0 +1,5 @@
+            pyautogui.click(466,450,interval=.75,clicks=2)
+            pyautogui.click(591,450,interval=.75,clicks=2)
+            pyautogui.click(718,450,interval=.75,clicks=2)
+            pyautogui.click(836,450,interval=.75,clicks=2)
+            pyautogui.click(967,450,interval=.75,clicks=2)
