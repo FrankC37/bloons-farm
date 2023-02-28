@@ -58,7 +58,7 @@ else:
 
     #buffer time to swap to bloons window
     time.sleep(3)
-    count = 0
+    cash = 0
     while True:
         startMap()
 
@@ -74,5 +74,5 @@ else:
         endOfMatch()
         #pyautogui.click(700,450,interval=1,clicks=290)
         time.sleep(3)
-        count = count +1
-        print(f"Times run: {count}")
+        cash = cash + 66
+        print(f"Est Cash Gained: {cash}")
