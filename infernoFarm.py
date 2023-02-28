@@ -58,9 +58,8 @@ else:
 
     #buffer time to swap to bloons window
     time.sleep(3)
-
+    count = 0
     while True:
-        count = 0
         startMap()
 
         # tower placements
