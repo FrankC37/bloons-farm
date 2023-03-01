@@ -1,7 +1,6 @@
 import pyautogui
 import time
 screenSizeX, screenSizeY = pyautogui.size()
-
 if screenSizeX != 1440 and screenSizeY != 900:
     print('Resolution is Incorrect for this scripts parameters, you will need to make customizations to make this fit your resolution.')
     print(f"Your screen resolution is {screenSizeX},{screenSizeY}")
@@ -73,9 +72,8 @@ else:
         cash = cash + 66
         print(f"Est Cash Gained: {cash}")
         # start collection event logic
-        collectButton = pyautogui.locateCenterOnScreen('media/collect.png')
+        collectButton = pyautogui.locateCenterOnScreen('collect.png')
         if collectButton != None:
-            collectButton = pyautogui.locateCenterOnScreen('collect.png')
             pyautogui.click(collectButton)
             pyautogui.click(466,450,interval=.75,clicks=2)
             pyautogui.click(591,450,interval=.75,clicks=2)
