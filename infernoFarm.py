@@ -9,6 +9,11 @@ if screenSizeX != 1440 and screenSizeY != 900:
 else:
     pyautogui.PAUSE = 0.5
     #define tower placement parameters
+    def hero():
+        pyautogui.moveTo(610,284)
+        pyautogui.press('U',presses=2)
+        pyautogui.click()
+        
     def sniper():
         pyautogui.moveTo(1154,437)
         pyautogui.press('S',presses=4)
@@ -60,6 +65,7 @@ else:
         startMap()
 
         # tower placements
+        hero()
         village()
         sniper()
         alchemist()
