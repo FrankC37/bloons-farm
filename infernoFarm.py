@@ -9,9 +9,10 @@ if screenSizeX != 1440 and screenSizeY != 900:
 else:
     pyautogui.PAUSE = 0.5
     #define tower placement parameters
+    # hero placement if farming hero achievement
     def hero():
         pyautogui.moveTo(610,284)
-        pyautogui.press('U',presses=2)
+        pyautogui.press('U',presses=2,interval=0.5)
         pyautogui.click()
         
     def sniper():
@@ -61,19 +62,18 @@ else:
     #buffer time to swap to bloons window
     time.sleep(3)
     cash = 0
+    # main loop
     while True:
         startMap()
 
         # tower placements
-        hero()
         village()
         sniper()
         alchemist()
 
         runMap()
-
-        #sleepDuringMatch.start()
         time.sleep(297)
+
         endOfMatch()
         time.sleep(3)
         cash = cash + 66
